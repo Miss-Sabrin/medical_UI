@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:insta_image_viewer/insta_image_viewer.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -28,10 +29,12 @@ class Header extends StatelessWidget {
               )
             ],
           ),
-          CircleAvatar(
-            backgroundImage:
-                AssetImage('images/sab.jpg'), // Add your profile image here
-            radius: 24,
+          InstaImageViewer(
+            child: CircleAvatar(
+              backgroundImage:
+                  AssetImage('images/sab.jpg'), // Add your profile image here
+              radius: 24,
+            ),
           )
         ],
       ),
